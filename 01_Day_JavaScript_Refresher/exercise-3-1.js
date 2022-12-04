@@ -50,22 +50,72 @@ const mixedDataTypes = [
 console.log(mixedDataTypes);
 console.log(mixedDataTypes.length);
 
-//   Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon
-//   Print the array using console.log()
-//   Print the number of companies in the array
-//   Print the first company, middle and last company
-//   Print out each company
-//   Change each company name to uppercase one by one and print them out
-//   Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
-//   Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
-//   Filter out companies which have more than one 'o' without the filter method
-//   Sort the array using sort() method
-//   Reverse the array using reverse() method
-//   Slice out the first 3 companies from the array
-//   Slice out the last 3 companies from the array
-//   Slice out the middle IT company or companies from the array
-//   Remove the first IT company from the array
-//   Remove the middle IT company or companies from the array
-//   Remove the last IT company from the array
-//   Remove all IT companies
+console.log("Declare an array variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon")
+const itCompanies = ["Facebook", "Google", "Microsoft", "Apple", "IBM", "Oracle", "Amazon"]
+
+console.log("Print the array using console.log()")
+console.log(itCompanies)
+
+console.log("Print the number of companies in the array")
+console.log(itCompanies.length)
+
+console.log(" Print the first company, middle and last company")
+console.log(itCompanies[0])
+console.log(itCompanies[3])
+
+console.log(" Print out each company")
+itCompanies.forEach(e => console.log(e));
+
+console.log(" Change each company name to uppercase one by one and print them out")
+const itCompaniesUpperCase = itCompanies.map(e => e.toUpperCase());
+console.log(itCompaniesUpperCase)
+
+console.log(" Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.")
+const lastIndex = itCompanies.length - 1;
+console.log(itCompanies.slice(0, lastIndex).join(", ") + " and " + itCompanies[lastIndex] + " are big IT companies.")
+
+console.log("  Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found")
+console.log(itCompanies.includes("Facebook") ? "Facebook" : "not found")
+console.log(itCompanies.includes("Twitter") ? "Facebook" : "not found")
+
+console.log("  Filter out companies which have more than one 'o' without the filter method")
+itCompanies.map(e => e.indexOf("o") === -1 ? "" : e).forEach(e => {
+    if (e !== "") {
+        console.log(e);
+    }
+});
+
+console.log("  Sort the array using sort() method");
+const sorted = itCompanies.sort();
+console.log(sorted);
+
+console.log("  Reverse the array using reverse() method");
+const reversed = itCompanies.reverse();
+console.log(reversed);
+
+console.log("  Slice out the first 3 companies from the array");
+console.log(itCompanies.slice(0, 3));
+
+console.log("  Slice out the last 3 companies from the array");
+console.log(itCompanies.slice(itCompanies.length - 3, itCompanies.length));
+
+console.log("  Slice out the middle IT company or companies from the array");
+console.log(itCompanies[Math.floor(itCompanies.length / 2)]);
+
+console.log("   Remove the first IT company from the array");
+itCompanies.shift();
+console.log(itCompanies);
+
+console.log("  Remove the middle IT company or companies from the array");
+itCompanies.push("Oracle");
+console.log(itCompanies);
+const middleIndex = Math.floor(itCompanies.length / 2);
+console.log(itCompanies.slice(0, middleIndex).concat(itCompanies.slice(middleIndex + 1, itCompanies.length)));
+
+console.log("  Remove the last IT company from the array");
+itCompanies.pop();
+console.log(itCompanies);
+
+console.log("  Remove all IT companies");
+console.log(itCompanies.splice());
   
