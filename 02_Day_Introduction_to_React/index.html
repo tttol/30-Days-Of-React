@@ -16,7 +16,7 @@
     <script type="text/babel">
         const rootElement = document.querySelector(".root");
         const header = (
-            <header>
+            <header className="hd">
                 <h1>Welcome to 30 Days Of React</h1>
                 <h2>Getting Started React</h2>
                 <h3>JavaScript Library</h3>
@@ -25,13 +25,12 @@
             </header>
         )
 
+        const techs = ["HTML", "CSS", "JS"].map(e => <li key={e}>{e}</li>);
         const main = (
             <main>
                 <p>Prerequisite to get started react.js:</p>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
+                    {techs}
                 </ul>
             </main>
         )
