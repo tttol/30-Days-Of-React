@@ -1,0 +1,24 @@
+.Icon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.iconImageBox {
+    display: flex;
+    width: auto;
+}
+
+.iconImage {
+    text-align: center;
+}
+
+.iconImage img {
+    width: 70%;
+}
+

@@ -1,0 +1,46 @@
+.formBox {
+    background: #bdeffc;
+    margin: 2%;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+.title {
+    margin-bottom: 6%;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 6%;
+}
+
+.inputBox {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.inputBox input {
+    margin: 0 0.3em;
+    border-radius: 10px;
+    height: 20px;
+    padding: 5px;
+    border-style: none;
+    border-width: 1px;
+}
+
+input::placeholder {
+    color: lightgray;
+}
+
+.buttonBox {
+    text-align: center;
+}
+
+.submitButton {
+    border: none;
+    color: white;
+    background: #fc8c86;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
