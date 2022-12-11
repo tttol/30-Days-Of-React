@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Icon from './component/day4/Icon'
 import Form from './component/day4/Form'
+import Color from './component/day4/Color'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,6 +13,11 @@ root.render(
     {/* <App /> */}
     <Icon />
     <Form />
+    <Color />
+    <Color />
+    <Color />
+    <Color />
+    <Color />
   </React.StrictMode>
 );
 
