@@ -6,8 +6,20 @@ import Icon from './component/day4/Icon'
 import Form from './component/day4/Form'
 import Color from './component/day4/Color'
 import reportWebVitals from './reportWebVitals';
+import PropsSample from './component/day5/PropsSample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const person = {
+  name: "Tom",
+  age: 20,
+  sex: "male"
+};
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+
 root.render(
   <React.StrictMode>
     {/* <App /> */}
@@ -18,6 +30,8 @@ root.render(
     <Color />
     <Color />
     <Color />
+    <Welcome name="Sara" />
+    <PropsSample person={person} />
   </React.StrictMode>
 );
 
