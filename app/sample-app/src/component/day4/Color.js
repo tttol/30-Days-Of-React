@@ -7,7 +7,7 @@ const getColorCodeHex = () => {
 function Color() {
     const colorCode = getColorCodeHex();
     return(
-        <div className='box' style={{backgroundColor: colorCode}}>{colorCode}</div>
+        <div className='colorBox' style={{backgroundColor: colorCode}}>{colorCode}</div>
     );
 }
 

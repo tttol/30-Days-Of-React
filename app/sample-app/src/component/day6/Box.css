@@ -1,0 +1,17 @@
+.containerBox {
+    text-align: center;
+}
+
+.box {
+    color: white;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    font-weight: bold;
+    font-size: 35px;
+}

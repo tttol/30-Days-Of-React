@@ -7,6 +7,7 @@ import Form from './component/day4/Form'
 import Color from './component/day4/Color'
 import reportWebVitals from './reportWebVitals';
 import PropsSample from './component/day5/PropsSample';
+import Numbers from './component/day6/Numbers';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const person = {
@@ -23,15 +24,16 @@ function Welcome(props) {
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Icon />
-    <Form />
+    {/* <Icon />
+    <Form /> */}
     <Color />
-    <Color />
+    {/* <Color />
     <Color />
     <Color />
     <Color />
     <Welcome name="Sara" />
-    <PropsSample person={person} />
+    <PropsSample person={person} /> */}
+    <Numbers />
   </React.StrictMode>
 );
 
