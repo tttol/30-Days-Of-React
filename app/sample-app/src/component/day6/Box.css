@@ -13,5 +13,12 @@
     margin-bottom: 2px;
     margin-right: 2px;
     font-weight: bold;
+} 
+
+.numberBox {
     font-size: 35px;
+}
+
+.hexadecimalColorBox {
+    font-size: 15px;
 }

@@ -8,6 +8,7 @@ import Color from './component/day4/Color'
 import reportWebVitals from './reportWebVitals';
 import PropsSample from './component/day5/PropsSample';
 import Numbers from './component/day6/Numbers';
+import HexadecimalColors from './component/day6/HexadecimalColors';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const person = {
@@ -34,6 +35,7 @@ root.render(
     <Welcome name="Sara" />
     <PropsSample person={person} /> */}
     <Numbers />
+    <HexadecimalColors />
   </React.StrictMode>
 );
 

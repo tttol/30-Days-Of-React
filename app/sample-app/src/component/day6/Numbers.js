@@ -1,25 +1,24 @@
 import Box from "./Box";
-import './Numbers.css'
 import './Box.css'
 
 function Numbers() {
     const SIZE = 32;
     const numbers = [...Array(SIZE)].map((_, i) => i);
     const style = {
-        prime: "prime",
-        even: "even",
-        odd: "odd"
+        prime: "#f52c2c",
+        even: "#30ba43",
+        odd: "#f5d63d"
     };
 
     const getNumberInfo = (number) => {
         const isEven = number % 2 === 0;
 
         if (isPrime(number)) {
-            return {number: number, styleClass: style.prime};
+            return {value: number, style: style.prime};
         } else if (isEven) {
-            return {number: number, styleClass: style.even};
+            return {value: number, style: style.even};
         } else {
-            return {number: number, styleClass: style.odd};
+            return {value: number, style: style.odd};
         }
     }
 
@@ -34,7 +33,7 @@ function Numbers() {
 
     const numberBoxes = [];
     numbers.forEach((element, index) => {
-            numberBoxes.push(<Box domObj={getNumberInfo(element)} />)
+            numberBoxes.push(<Box domObj={getNumberInfo(element)} styleClass="numberBox" />)
             if ((index + 1) % 8 === 0) numberBoxes.push(<br/>)
         }
     )
