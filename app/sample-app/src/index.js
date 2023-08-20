@@ -1,39 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Icon from './component/day4/Icon'
-import Form from './component/day4/Form'
-import Color from './component/day4/Color'
 import reportWebVitals from './reportWebVitals';
-import PropsSample from './component/day5/PropsSample';
-import Numbers from './component/day6/Numbers';
-import HexadecimalColors from './component/day6/HexadecimalColors';
 import StateSample from './component/day8/StateSample';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-const person = {
-  name: "Tom",
-  age: 20,
-  sex: "male"
-};
-
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+const Day21 = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <div className='Day21'>
+      <h1>Day 21 Introducing React Hook(useState)</h1>
+      <h2>{count} </h2>
+      <button onClick={() => setCount(count + 1)}>+1</button>
+      <button onClick={() => setCount(count - 1)}>-1</button>
+    </div>
+  )
 }
 
+const Day22SingleInput = () => {
+  const [firstName, setFirstName] = useState("Tom");
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setFirstName(value);
+  }
 
+  return (
+    <div className='Day22SingleInput'>
+      <h1>First Name: {firstName}</h1>
+      <label htmlFor='firstName'>First Name: </label>
+      <input type='text' id='firstName' name='firstName' placeholder='First Name' value={firstName} onChange={handleChange} />
+    </div>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* <Icon />
-    <Form /> */}
-    {/* <Color />
-    <Welcome name="Sara" />
-    <PropsSample person={person} /> */}
-    {/* <Numbers />
-    <HexadecimalColors /> */}
     <StateSample />
+    <Day21 />
+    <Day22SingleInput />
   </React.StrictMode>
 );
 
